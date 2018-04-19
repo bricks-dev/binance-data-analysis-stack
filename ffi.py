@@ -114,8 +114,8 @@ async def test_parse_stream():
     print(await db.get(2))
 
 def main():
-    fname = "/mnt/960EVO/workspace/tectonicdb/target/debug/db/c57b1995-e8ff-4035-a57f-07f7c86f38d0--binance_btc_usdt.dtf"
-    data = read_dtf_to_csv_with_limit(fname, 1000000)
+    fname = "/mnt/960EVO/workspace/tectonicdb/target/debug/db/c2eafac5-1065-4960-ab51-bafeb5b3bc21--binance_btc_usdt.dtf"
+    data = read_dtf_to_csv_with_limit(fname, 100000)
     df = __csv_to_df(data)
     print(df)
 
