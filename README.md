@@ -7,6 +7,11 @@ store and analyze binance crytocurrency exchange trade data.
 3. tectonicdb custom datastore format, to allow more info per row [10%]
 4. map tectonicdb datastore into traditional database, allow time search [0%]
 5. use plotly dash to visualize data [0%]
+6. spin up server to host database [0%]
+7. chaos engineering and fault tolerance [0%]
+8. backup server [0%]
+9. docker image [0%]
+10. ml or dl to analyze data [0%]
 
 ## Tech stack
 
