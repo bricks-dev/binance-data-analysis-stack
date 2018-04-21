@@ -2,16 +2,17 @@
 store and analyze binance crytocurrency exchange trade data.
 
 ## Roadmap:
-1. tectonicdb initial test, store only btcusdt trade data [100%]
+1. tectonicdb initial test, store only btcusdt trade tick data [100%]
 2. tectonicdb stress test, store all trade pairs [100%]
 3. tectonicdb custom datastore format, to allow more info per row [10%]
-4. map tectonicdb datastore into traditional database, allow time search [0%]
-5. use plotly dash to visualize data [0%]
-6. spin up server to host database [0%]
-7. chaos engineering and fault tolerance [0%]
-8. backup server [0%]
-9. docker image [0%]
-10. ml or dl to analyze data [0%]
+4. store orderbook at any moment [0%]
+5. map tectonicdb datastore into traditional database, allow time search [0%]
+6. use plotly dash to visualize data [0%]
+7. spin up server to host database [0%]
+8. chaos engineering and fault tolerance [0%]
+9. backup server [0%]
+10. docker image [0%]
+11. ml or dl to analyze data [0%]
 
 ## Tech stack
 
