@@ -91,6 +91,13 @@ change liblibtectonic.so location to use absolute path, in ffi.py
 
 `python binance_orderbook.py`
 
+#### jupyter lab
+install
+https://github.com/jupyterlab/jupyterlab
+
+to connect to jupyter lab running on ec2 instance
+https://towardsdatascience.com/setting-up-and-using-jupyter-notebooks-on-aws-61a9648db6c5
+
 ## Tech stack
 
 #### tectonicdb: https://github.com/rickyhan/tectonicdb
