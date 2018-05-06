@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5954d5f6-8a00-4aca-9909-2f6212287180" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/binance_orderbook.py" beforeDir="false" afterPath="$PROJECT_DIR$/binance_orderbook.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitsecret/keys/random_seed" beforeDir="false" afterPath="$PROJECT_DIR$/.gitsecret/keys/random_seed" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf_secret.py.secret" beforeDir="false" afterPath="$PROJECT_DIR$/conf_secret.py.secret" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
