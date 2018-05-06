@@ -72,6 +72,8 @@ clone this repo
 #### setup git-secret
 http://git-secret.io/
 
+export gpg key: https://askubuntu.com/questions/648857/how-to-share-the-public-openpgp-key-using-gnupg
+
 ## Tech stack
 
 #### 1. tectonicdb: https://github.com/rickyhan/tectonicdb
