@@ -62,6 +62,8 @@ install anaconda: https://conda.io/docs/user-guide/install/linux.html
 #### fastai
 mainly using this for the easy to use tools that come along with it.
 
+https://github.com/fastai/fastai
+
 #### this repo
 clone this repo
 
