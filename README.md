@@ -14,6 +14,47 @@ store and analyze binance crytocurrency exchange trade data.
 10. docker image [0%]
 11. ml or dl to analyze data [0%]
 
+## Installation AWS EC2
+
+```
+sudo apt-get update
+sudo apt-get upgrade
+```
+install rust: 
+https://www.rust-lang.org/en-US/install.html
+
+clone tectonicdb, my branch has google cloud upload turned off: 
+https://github.com/mingrui/tectonicdb.git
+
+Master branch: https://github.com/rickyhan/tectonicdb
+
+before building tectonicdb, install gcc: 
+https://gist.github.com/application2000/73fd6f4bf1be6600a2cf9f56315a2d91
+```
+GCC 8.1.0 on Ubuntu 14.04 & 16.04 & 18.04:
+
+sudo apt-get update -y && 
+sudo apt-get upgrade -y && 
+sudo apt-get dist-upgrade -y && 
+sudo apt-get install build-essential software-properties-common -y && 
+sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y && 
+sudo apt-get update -y && 
+sudo apt-get install gcc-8 g++-8 -y && 
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-8 60 --slave /usr/bin/g++ g++ /usr/bin/g++-8 && 
+sudo update-alternatives --config gcc
+
+select gcc-8
+```
+
+Install OpenSSL, **after installation reboot EC2 instance**, otherwise OpenSSL path will not register.
+```
+sudo apt-get install pkg-config libssl-dev
+```
+
+Switch Rust to nightly build mode
+
+Build tectonicdb
+
 ## Tech stack
 
 #### 1. tectonicdb: https://github.com/rickyhan/tectonicdb
