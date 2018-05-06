@@ -74,6 +74,8 @@ http://git-secret.io/
 
 export gpg key: https://askubuntu.com/questions/648857/how-to-share-the-public-openpgp-key-using-gnupg
 
+download key file from ec2: https://stackoverflow.com/questions/9441008/how-can-i-download-a-file-from-ec2
+
 ## Tech stack
 
 #### 1. tectonicdb: https://github.com/rickyhan/tectonicdb
