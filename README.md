@@ -76,6 +76,8 @@ export gpg key: https://askubuntu.com/questions/648857/how-to-share-the-public-o
 
 download key file from ec2: https://stackoverflow.com/questions/9441008/how-can-i-download-a-file-from-ec2
 
+when creating a new gpg key on your aws, you need to use a **DIFFERENT** email address, otherwise `git secret reveal` will not work
+
 ## Tech stack
 
 #### 1. tectonicdb: https://github.com/rickyhan/tectonicdb
