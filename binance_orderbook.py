@@ -82,8 +82,8 @@ def multiplex_sockets(tickers):
     bm.start()
 
 if __name__=='__main__':
-    #all_tickers = [tic['symbol'].lower() for tic in client.get_all_tickers()]
-    #multiplex_sockets([tic+'@trade' for tic in all_tickers])
+    all_tickers = [tic['symbol'].lower() for tic in client.get_all_tickers()]
+    multiplex_sockets([tic+'@trade' for tic in all_tickers])
 
-    orderbook_depth()
+    #orderbook_depth()
 
