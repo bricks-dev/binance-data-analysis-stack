@@ -66,6 +66,9 @@ mainly using this for the easy to use tools that come along with it.
 
 https://github.com/fastai/fastai
 
+#### python-binance
+https://github.com/sammchardy/python-binance
+
 #### this repo
 clone this repo
 
@@ -80,14 +83,17 @@ when creating a new gpg key on your aws, you need to use a **DIFFERENT** email a
 
 ## Tech stack
 
-#### 1. tectonicdb: https://github.com/rickyhan/tectonicdb
+#### tectonicdb: https://github.com/rickyhan/tectonicdb
 Remember to set tectonicdb upload to gcloud delete after upload to false
 
+#### python-binance: https://github.com/sammchardy/python-binance
+binance websocket api
 
-#### 2. fastai: https://github.com/fastai/fastai
+#### fastai: https://github.com/fastai/fastai
 For python environment, I just use the same as fastai, I find the script for setting up conda env extremely easy to use, and basically for any data science project, you have almost all the libraries that you will need.
 
-#### 3. git-secret: http://git-secret.io/
+#### git-secret: http://git-secret.io/
 Use this to store your api keys
 
-#### 4. Dash by Plotly https://plot.ly/products/dash/
+#### Dash by Plotly https://plot.ly/products/dash/
+
