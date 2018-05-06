@@ -82,6 +82,15 @@ download key file from ec2: https://stackoverflow.com/questions/9441008/how-can-
 
 when creating a new gpg key on your aws, you need to use a **DIFFERENT** email address, otherwise `git secret reveal` will not work
 
+#### start binance_orderbook.py
+remember to use fastai
+`source activate fastai`
+
+change liblibtectonic.so location to use absolute path, in ffi.py
+`lib_path = path.normpath(path.join(cwd, '/mnt/960EVO/workspace/tectonicdb/target/debug/liblibtectonic.so'))`
+
+`python binance_orderbook.py`
+
 ## Tech stack
 
 #### tectonicdb: https://github.com/rickyhan/tectonicdb
