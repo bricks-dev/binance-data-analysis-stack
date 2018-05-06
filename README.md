@@ -15,7 +15,7 @@ store and analyze binance crytocurrency exchange trade data.
 11. ml or dl to analyze data [0%]
 
 ## Installation AWS EC2
-
+#### TectonicDB
 ```
 sudo apt-get update
 sudo apt-get upgrade
@@ -26,7 +26,7 @@ https://www.rust-lang.org/en-US/install.html
 clone tectonicdb, my branch has google cloud upload turned off: 
 https://github.com/mingrui/tectonicdb.git
 
-Master branch: https://github.com/rickyhan/tectonicdb
+master branch: https://github.com/rickyhan/tectonicdb
 
 before building tectonicdb, install gcc: 
 https://gist.github.com/application2000/73fd6f4bf1be6600a2cf9f56315a2d91
@@ -47,13 +47,26 @@ select gcc-8
 ```
 
 Install OpenSSL, **after installation reboot EC2 instance**, otherwise OpenSSL path will not register.
+https://github.com/sfackler/rust-openssl
 ```
 sudo apt-get install pkg-config libssl-dev
 ```
 
-Switch Rust to nightly build mode
+Setup rust nightly: https://github.com/rust-lang-nursery/rustup.rs#working-with-nightly-rust
 
 Build tectonicdb
+
+#### Anaconda
+install anaconda: https://conda.io/docs/user-guide/install/linux.html
+
+#### fastai
+mainly using this for the easy to use tools that come along with it.
+
+#### this repo
+clone this repo
+
+#### setup git-secret
+http://git-secret.io/
 
 ## Tech stack
 
