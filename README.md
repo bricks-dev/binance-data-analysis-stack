@@ -15,6 +15,8 @@ store and analyze binance crytocurrency exchange trade data.
 11. ml or dl to analyze data [0%]
 
 ## Installation AWS EC2
+if you are on free tier, pick 30gb storage, the entire installation should take about 16gb
+this gives you some leftover storage to store data
 #### TectonicDB
 ```
 sudo apt-get update
