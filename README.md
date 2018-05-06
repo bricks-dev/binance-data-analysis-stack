@@ -67,6 +67,7 @@ mainly using this for the easy to use tools that come along with it.
 https://github.com/fastai/fastai
 
 #### python-binance
+`source activate fastai`, then install this binance api helper
 https://github.com/sammchardy/python-binance
 
 #### this repo
