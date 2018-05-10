@@ -98,6 +98,14 @@ https://github.com/jupyterlab/jupyterlab
 to connect to jupyter lab running on ec2 instance
 https://towardsdatascience.com/setting-up-and-using-jupyter-notebooks-on-aws-61a9648db6c5
 
+## Usage
+
+For tectonic-server, i just set write intervalto 1000 rows / flush
+(flush is tectonicdb's term for batch write operation)
+`./tectonic-server -vv -a -i 1000`
+
+
+
 ## Tech stack
 
 #### tectonicdb: https://github.com/rickyhan/tectonicdb
