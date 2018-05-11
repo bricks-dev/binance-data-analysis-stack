@@ -125,8 +125,8 @@ Use this to store your api keys
 
 ## Dev Resources
 
-| Link |
-| ----- |
-| https://logmatic.io/blog/python-logging-with-json-steroids/ |
-| https://docs.python.org/3/howto/logging-cookbook.html |
-| https://docs.python.org/3/howto/logging.html |
+| Topic | Link |
+| ----- | ----- |
+| Logging | https://logmatic.io/blog/python-logging-with-json-steroids/ |
+| Logging | https://docs.python.org/3/howto/logging-cookbook.html |
+| Logging | https://docs.python.org/3/howto/logging.html |
