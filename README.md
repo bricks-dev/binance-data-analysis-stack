@@ -107,7 +107,7 @@ For tectonic-server, i just set write intervalto 1000 rows / flush
 
 
 
-## Tech stack
+## Tech Stack
 
 #### tectonicdb: https://github.com/rickyhan/tectonicdb
 Remember to set tectonicdb upload to gcloud delete after upload to false
@@ -123,3 +123,10 @@ Use this to store your api keys
 
 #### Dash by Plotly https://plot.ly/products/dash/
 
+## Dev Resources
+
+| Link |
+| ----- |
+| https://logmatic.io/blog/python-logging-with-json-steroids/ |
+| https://docs.python.org/3/howto/logging-cookbook.html |
+| https://docs.python.org/3/howto/logging.html |
