@@ -130,3 +130,4 @@ Use this to store your api keys
 | Logging | https://logmatic.io/blog/python-logging-with-json-steroids/ |
 | Logging | https://docs.python.org/3/howto/logging-cookbook.html |
 | Logging | https://docs.python.org/3/howto/logging.html |
+| api | https://sammchardy.github.io/binance/2018/01/08/historical-data-download-binance.html |
