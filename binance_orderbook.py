@@ -1,6 +1,5 @@
 import asyncio
-
-from conf_secret import binance_pubkey, binance_prvkey
+import logging
 
 from binance.client import Client
 from binance.websockets import BinanceSocketManager
@@ -8,6 +7,9 @@ from binance.depthcache import DepthCacheManager
 from binance.enums import *
 
 from tectonic import TectonicDB
+
+from conf_secret import binance_pubkey, binance_prvkey
+
 
 '''
 tectonic db row format
@@ -36,6 +38,9 @@ binance trade stream format
 
 https://github.com/sammchardy/python-binance
 '''
+
+# simple logging
+logging.basicConfig(filename='binance-tectonicdb-test.log', level=logging.INFO, format='%(asctime)s %(message)s')
 
 # binance client
 client = Client(binance_pubkey, binance_prvkey)
@@ -75,6 +80,7 @@ def process_m_message(msg):
 
 def multiplex_sockets(tickers):
     for tic in tickers:
+        logging.info('start collecting tic : ' + tic)
         loop.run_until_complete(db.create(tic))
 
     bm = BinanceSocketManager(client)
@@ -82,8 +88,8 @@ def multiplex_sockets(tickers):
     bm.start()
 
 if __name__=='__main__':
+    logging.info('start')
     all_tickers = [tic['symbol'].lower() for tic in client.get_all_tickers()]
     multiplex_sockets([tic+'@trade' for tic in all_tickers])
 
     #orderbook_depth()
-
