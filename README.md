@@ -8,11 +8,12 @@ store and analyze binance crytocurrency exchange trade data.
 4. store orderbook at any moment [0%]
 5. map tectonicdb datastore into traditional database, allow time search [0%]
 6. use plotly dash to visualize data [0%]
-7. spin up server to host database [0%]
+7. spin up server to host database [100%]
 8. chaos engineering and fault tolerance [0%]
 9. backup server [0%]
 10. docker image [0%]
 11. ml or dl to analyze data [0%]
+12. simple logging [100%]
 
 ## Installation AWS EC2
 if you are on free tier, pick 30gb storage, the entire installation should take about 16gb
