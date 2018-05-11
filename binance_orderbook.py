@@ -3,13 +3,12 @@ import logging
 
 from binance.client import Client
 from binance.websockets import BinanceSocketManager
-from binance.depthcache import DepthCacheManager
-from binance.enums import *
+from binance.exceptions import BinanceAPIException
+
 
 from tectonic import TectonicDB
 
 from conf_secret import binance_pubkey, binance_prvkey
-
 
 '''
 tectonic db row format
@@ -48,6 +47,46 @@ client = Client(binance_pubkey, binance_prvkey)
 db = TectonicDB()
 # use only one event loop
 loop = asyncio.get_event_loop()
+# conn_key is returned when starting a socket, need this to close a socket
+multiplex_conn_key = None
+# binance socket manager
+bm = BinanceSocketManager(client)
+
+def process_m_message(msg):
+    try:
+        stream = msg['stream']
+        data = msg['data']
+        print("stream: {} data: {}".format(stream, data))
+        loop.run_until_complete(db.insert(data['E'], data['t'], True, data['m'], data['p'], data['q'], stream))
+    except BinanceAPIException as e:
+        logging.error(e.status_code)
+        logging.error(e.message)
+
+def start_multiplex_socket():
+    all_tickers = [tic['symbol'].lower() for tic in client.get_all_tickers()]
+    multiplex_sockets([tic+'@trade' for tic in all_tickers])
+
+def multiplex_sockets(tickers):
+    for tic in tickers:
+        logging.info('start collecting tic : ' + tic)
+        loop.run_until_complete(db.create(tic))
+
+    multiplex_conn_key = bm.start_multiplex_socket(tickers, process_m_message)
+    bm.start()
+
+if __name__=='__main__':
+    logging.info('start')
+    start_multiplex_socket()
+    #orderbook_depth()
+
+
+###
+# example code
+###
+
+
+from binance.depthcache import DepthCacheManager
+from binance.enums import *
 
 def process_depth(depth_cache):
     if depth_cache is not None:
@@ -72,24 +111,4 @@ def orderbook_depth():
     partial_key = bm.start_depth_socket('BNBBTC', process_message, depth=BinanceSocketManager.WEBSOCKET_DEPTH_5)
     bm.start()
 
-def process_m_message(msg):
-    stream = msg['stream']
-    data = msg['data']
-    print("stream: {} data: {}".format(stream, data))
-    loop.run_until_complete(db.insert(data['E'], data['t'], True, data['m'], data['p'], data['q'], stream))
 
-def multiplex_sockets(tickers):
-    for tic in tickers:
-        logging.info('start collecting tic : ' + tic)
-        loop.run_until_complete(db.create(tic))
-
-    bm = BinanceSocketManager(client)
-    conn_key = bm.start_multiplex_socket(tickers, process_m_message)
-    bm.start()
-
-if __name__=='__main__':
-    logging.info('start')
-    all_tickers = [tic['symbol'].lower() for tic in client.get_all_tickers()]
-    multiplex_sockets([tic+'@trade' for tic in all_tickers])
-
-    #orderbook_depth()
