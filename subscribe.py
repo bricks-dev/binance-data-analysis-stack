@@ -31,7 +31,7 @@ class TickBatcher(object):
 
 if __name__ == '__main__':
     loop = asyncio.get_event_loop()
-    proc = TickBatcher("bnc_xrp_btc")
+    proc = TickBatcher("btcusdt@trade")
     loop.create_task(proc.batch())
     loop.create_task(proc.timer())
     loop.run_forever()

@@ -19,6 +19,7 @@ class TectonicDB():
         from tectonic import TectonicDB
         import json
         import asyncio
+
         async def subscribe(name):
             db = TectonicDB()
             print(await db.subscribe(name))
@@ -28,10 +29,12 @@ class TectonicDB():
                     await asyncio.sleep(0.01)
                 else:
                     yield json.loads(item)
+
         class TickBatcher(object):
             def __init__(self, db_name):
                 self.one_batch = []
                 self.db_name = db_name
+
             async def batch(self):
                 generator = subscribe(self.db_name)
                 async for item in generator:

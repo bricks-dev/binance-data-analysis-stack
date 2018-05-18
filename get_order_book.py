@@ -1,39 +1,20 @@
 from tectonic import TectonicDB
-import json
+import time
 import asyncio
 
-
-async def subscribe(name):
+async def monitor():
     db = TectonicDB()
-    print(await db.subscribe(name))
+    res = await db.countall()
+    init = int(res[1])
     while 1:
-        _, item = await db.poll()
-        if item == b"NONE":
-            await asyncio.sleep(0.01)
-        else:
-            yield json.loads(item)
-
-
-class TickBatcher(object):
-    def __init__(self, db_name):
-        self.one_batch = []
-        self.db_name = db_name
-
-    async def batch(self):
-        generator = subscribe(self.db_name)
-        async for item in generator:
-            self.one_batch.append(item)
-
-    async def timer(self):
-        while 1:
-            await asyncio.sleep(5)
-            print(len(self.one_batch))
-
+        time.sleep(1)
+        res = await db.countall()
+        new_count = int(res[1])
+        print(new_count - init)
+        init = new_count
 
 if __name__ == '__main__':
     loop = asyncio.get_event_loop()
-    proc = TickBatcher("binance_btc_usdt")
-    loop.create_task(proc.batch())
-    loop.create_task(proc.timer())
+    loop.create_task(monitor())
     loop.run_forever()
     loop.close()
