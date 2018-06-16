@@ -83,6 +83,8 @@ download key file from ec2: https://stackoverflow.com/questions/9441008/how-can-
 
 when creating a new gpg key on your aws, you need to use a **DIFFERENT** email address, otherwise `git secret reveal` will not work
 
+To tell someone a secret, make sure you have gawk installed `sudo apt-get install gawk`
+
 #### start binance_orderbook.py
 remember to use fastai
 `source activate fastai`
