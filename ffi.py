@@ -10,6 +10,7 @@ try:
 except ImportError:
     from io import StringIO
 
+import mypath
 
 def __csv_to_df(raw_data):
     csv = StringIO("ts,seq,is_trade,is_bid,price,size\n" + raw_data)
@@ -28,7 +29,7 @@ def __csv_to_df(raw_data):
     return df
 
 cwd = path.dirname(path.realpath(__file__))
-lib_path = path.normpath(path.join(cwd, '/mnt/960EVO/workspace/tectonicdb/target/debug/liblibtectonic.so'))
+lib_path = path.normpath(path.join(cwd, mypath.TECTIONIC_SO))
 lib = CDLL(lib_path)
 
 class Update(Structure):
