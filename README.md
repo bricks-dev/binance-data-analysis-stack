@@ -102,10 +102,10 @@ to connect to jupyter lab running on ec2 instance
 https://towardsdatascience.com/setting-up-and-using-jupyter-notebooks-on-aws-61a9648db6c5
 
 ## Usage
+Use `tmux` to manage your terminal windows
 
-For tectonic-server, i just set write intervalto 1000 rows / flush
-(flush is tectonicdb's term for batch write operation)
-`./tectonic-server -vv -a -i 1000`
+`tectonic-server` is built to `tectonicdb/target/debug`. For tectonic-server, i just set write interval to 1000 rows / flush
+(flush is tectonicdb's term for batch write operation) `./tectonic-server -vv -a -i 1000`
 
 
 
