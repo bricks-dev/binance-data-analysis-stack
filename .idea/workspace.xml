@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5954d5f6-8a00-4aca-9909-2f6212287180" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/get.py" beforeDir="false" afterPath="$PROJECT_DIR$/get.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_binance_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_binance_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffi.py" beforeDir="false" afterPath="$PROJECT_DIR$/ffi.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,7 +25,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="get.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="get.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/get.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="352">
@@ -81,11 +79,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ffi.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ffi.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ffi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="29" selection-start-line="29" selection-end-line="29" />
+            <state relative-caret-position="1016">
+              <caret line="127" lean-forward="true" selection-start-line="127" selection-end-line="127" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -154,11 +152,11 @@
         <option value="$PROJECT_DIR$/binance_orderbook.py" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/path.py" />
-        <option value="$PROJECT_DIR$/ffi.py" />
         <option value="$PROJECT_DIR$/mypath.py" />
         <option value="$PROJECT_DIR$/conf_secret.py" />
         <option value="$PROJECT_DIR$/python_binance_test.py" />
         <option value="$PROJECT_DIR$/get.py" />
+        <option value="$PROJECT_DIR$/ffi.py" />
       </list>
     </option>
   </component>
@@ -573,16 +571,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ffi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/get_order_book.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
@@ -661,6 +649,16 @@
           <caret line="16" selection-start-line="16" selection-end-line="16" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ffi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1016">
+          <caret line="127" lean-forward="true" selection-start-line="127" selection-end-line="127" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>

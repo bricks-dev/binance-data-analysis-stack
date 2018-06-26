@@ -114,17 +114,17 @@ async def test_parse_stream():
     await db.insert(1,1,False,False,1,1,"default")
     print(await db.get(2))
 
-def main():
-    fname = "/mnt/960EVO/workspace/tectonicdb/target/debug/db/c2eafac5-1065-4960-ab51-bafeb5b3bc21--binance_btc_usdt.dtf"
-    data = read_dtf_to_csv_with_limit(fname, 100000)
-    df = __csv_to_df(data)
-    print(df)
-
-if __name__ == '__main__':
-    from time import time
-    start = time()
-    main()
-    print(time() - start)
+# def main():
+#     fname = "/mnt/960EVO/workspace/tectonicdb/target/debug/db/c2eafac5-1065-4960-ab51-bafeb5b3bc21--binance_btc_usdt.dtf"
+#     data = read_dtf_to_csv_with_limit(fname, 100000)
+#     df = __csv_to_df(data)
+#     print(df)
+#
+# if __name__ == '__main__':
+#     from time import time
+#     start = time()
+#     main()
+#     print(time() - start)
 
     # import asyncio
     # loop = asyncio.get_event_loop()
