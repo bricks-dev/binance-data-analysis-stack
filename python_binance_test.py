@@ -1,20 +1,41 @@
+#!/usr/bin/env python
+
 from conf_secret import binance_pubkey, binance_prvkey
+
+from binance.websockets import BinanceSocketManager
 
 from binance.client import Client
 client = Client(binance_pubkey, binance_prvkey)
 
-# get market depth
-depth = client.get_order_book(symbol='BNBBTC')
-# get all symbol prices
-prices = client.get_all_tickers()
+time_res = client.get_server_time()
 
-# start aggregated trade websocket for BNBBTC
+RECV_WINDOW=6000000
+
+class Monitor:
+    def __init__(self):
+        self.bac = Client(binance_pubkey, binance_prvkey)
+    def my_balance(self):
+        print(self.bac.get_all_tickers())
+
+
+m = Monitor()
+m.my_balance()
+
+
+
+
+
+
 def process_message(msg):
     print("message type: {}".format(msg['e']))
     print(msg)
     # do something
 
-from binance.websockets import BinanceSocketManager
+
 bm = BinanceSocketManager(client)
-bm.start_aggtrade_socket('BNBBTC', process_message)
+# start any sockets here, i.e a trade socket
+conn_key = bm.start_symbol_ticker_socket('BNBBTC', process_message)
+# then start the socket manager
 bm.start()
+
+

@@ -7,13 +7,14 @@ import asyncio
 
 async def get():
     db = TectonicDB()
-    print( await db.cmd('USE {}'.format('ethbtc@trade')) )
-    data = await db.cmd("GET ALL FROM 1514764800 TO 1514851200 AS CSV\n")
-    print(data)
+    print(await db.ping())
+    # print( await db.cmd('USE {}'.format('ethbtc@trade')) )
+    # data = await db.cmd("GET ALL FROM 1514764800 TO 1514851200 AS CSV\n")
+    # print(data)
     # data = db.cmd("GET ALL FROM 1514764800 TO 1514764860 AS CSV\n")[1]
-    csv = StringIO("ts,seq,is_trade,is_bid,price,size\n"+data[1].decode())
-    df = pd.read_csv(csv)
-    print (df)
+    # csv = StringIO("ts,seq,is_trade,is_bid,price,size\n"+data[1].decode())
+    # df = pd.read_csv(csv)
+    # print (df)
 
 
 if __name__ == '__main__':
