@@ -6,7 +6,7 @@ import pandas as pd
 import asyncio
 
 async def get():
-    db = TectonicDB()
+    db = TectonicDB('ec2-54-70-231-109.us-west-2.compute.amazonaws.com')
     print(await db.ping())
     # print( await db.cmd('USE {}'.format('ethbtc@trade')) )
     # data = await db.cmd("GET ALL FROM 1514764800 TO 1514851200 AS CSV\n")
